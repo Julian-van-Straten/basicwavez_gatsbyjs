@@ -50,6 +50,8 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create Page pages.
   const pageTemplate = path.resolve(`./src/templates/page.js`)
+
+  
   // We want to create a detailed page for each page node.
   // The path field contains the relative original WordPress link
   // and we use it for the slug to preserve url structure.
@@ -72,6 +74,48 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   const postTemplate = path.resolve(`./src/templates/post.js`)
+  const blogTemplate = path.resolve(`./src/templates/blog.js`)
+  const categoryMixingTemplate = path.resolve(`./src/templates/category/mixing.js`)
+  const categoryMasteringTemplate = path.resolve(`./src/templates/category/mastering.js`)
+  const categorySoundDesignTemplate = path.resolve(`./src/templates/category/sound-design.js`)
+  const categoryMusicTheoryTemplate = path.resolve(`./src/templates/category/music-theory.js`)
+  const categoryFreeStuffTemplate = path.resolve(`./src/templates/category/free-stuff.js`)
+  const categoryReviewsTemplate = path.resolve(`./src/templates/category/reviews.js`)
+
+  createPage({
+    path: `blog`,
+    component: slash(blogTemplate)
+  });
+
+  createPage({
+    path: `category/mixing`,
+    component: slash(categoryMixingTemplate)
+  });
+
+  createPage({
+    path: `category/mastering`,
+    component: slash(categoryMasteringTemplate)
+  });
+
+  createPage({
+    path: `category/sound-design`,
+    component: slash(categorySoundDesignTemplate)
+  });
+
+  createPage({
+    path: `category/music-theory`,
+    component: slash(categoryMusicTheoryTemplate)
+  });
+
+  createPage({
+    path: `category/free-stuff`,
+    component: slash(categoryFreeStuffTemplate)
+  });
+
+  createPage({
+    path: `category/reviews`,
+    component: slash(categoryReviewsTemplate)
+  });
   // We want to create a detailed page for each post node.
   // The path field stems from the original WordPress link
   // and we use it for the slug to preserve url structure.
