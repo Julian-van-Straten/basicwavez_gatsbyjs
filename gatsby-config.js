@@ -1,10 +1,37 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Basic Wavez - Home`,
+    subtitle: `blah`,
+    description: `Electronic Music Production tutorials, tips, product reviews, sample packs and products.`,
+    author: `Panda Face`,
   },
   plugins: [
+    {
+      resolve: "gatsby-source-wordpress",
+      options: {
+       
+        baseUrl: "localhost:8888",
+       
+        protocol: "http",
+        
+        hostingWPCOM: false,
+       
+        useACF: true,
+       
+        verboseOutput: true,
+
+        includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+        ],
+      
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
