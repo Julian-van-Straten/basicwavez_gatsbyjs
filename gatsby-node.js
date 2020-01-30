@@ -74,13 +74,13 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   const postTemplate = path.resolve(`./src/templates/post.js`)
-  const blogTemplate = path.resolve(`./src/templates/blog.js`)
-  const categoryMixingTemplate = path.resolve(`./src/templates/category/mixing.js`)
-  const categoryMasteringTemplate = path.resolve(`./src/templates/category/mastering.js`)
-  const categorySoundDesignTemplate = path.resolve(`./src/templates/category/sound-design.js`)
-  const categoryMusicTheoryTemplate = path.resolve(`./src/templates/category/music-theory.js`)
-  const categoryFreeStuffTemplate = path.resolve(`./src/templates/category/free-stuff.js`)
-  const categoryReviewsTemplate = path.resolve(`./src/templates/category/reviews.js`)
+  const blogTemplate = path.resolve(`./src/pages/blog.js`)
+  const categoryMixingTemplate = path.resolve(`./src/pages/category/mixing.js`)
+  const categoryMasteringTemplate = path.resolve(`./src/pages/category/mastering.js`)
+  const categorySoundDesignTemplate = path.resolve(`./src/pages/category/sound-design.js`)
+  const categoryMusicTheoryTemplate = path.resolve(`./src/pages/category/music-theory.js`)
+  const categoryFreeStuffTemplate = path.resolve(`./src/pages/category/free-stuff.js`)
+  const categoryReviewsTemplate = path.resolve(`./src/pages/category/reviews.js`)
 
   createPage({
     path: `blog`,
