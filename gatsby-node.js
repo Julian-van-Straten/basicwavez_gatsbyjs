@@ -75,46 +75,46 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const postTemplate = path.resolve(`./src/templates/post.js`)
   const blogTemplate = path.resolve(`./src/pages/blog.js`)
-  const categoryMixingTemplate = path.resolve(`./src/pages/category/mixing.js`)
-  const categoryMasteringTemplate = path.resolve(`./src/pages/category/mastering.js`)
-  const categorySoundDesignTemplate = path.resolve(`./src/pages/category/sound-design.js`)
-  const categoryMusicTheoryTemplate = path.resolve(`./src/pages/category/music-theory.js`)
-  const categoryFreeStuffTemplate = path.resolve(`./src/pages/category/free-stuff.js`)
-  const categoryReviewsTemplate = path.resolve(`./src/pages/category/reviews.js`)
+  const MixingTemplate = path.resolve(`./src/pages/mixing/index.js`)
+  const MasteringTemplate = path.resolve(`./src/pages/mastering/index.js`)
+  const SoundDesignTemplate = path.resolve(`./src/pages/sound-design/index.js`)
+  const MusicTheoryTemplate = path.resolve(`./src/pages/music-theory/index.js`)
+  const FreeStuffTemplate = path.resolve(`./src/pages/free-stuff/index.js`)
+  const ReviewsTemplate = path.resolve(`./src/pages/reviews/index.js`)
 
   createPage({
-    path: `blog`,
+    path: `/blog`,
     component: slash(blogTemplate)
   });
 
   createPage({
-    path: `category/mixing`,
-    component: slash(categoryMixingTemplate)
+    path: `/category/mixing`,
+    component: slash(MixingTemplate)
   });
 
   createPage({
-    path: `category/mastering`,
-    component: slash(categoryMasteringTemplate)
+    path: `/category/mastering`,
+    component: slash(MasteringTemplate)
   });
 
   createPage({
-    path: `category/sound-design`,
-    component: slash(categorySoundDesignTemplate)
+    path: `/category/sound-design`,
+    component: slash(SoundDesignTemplate)
   });
 
   createPage({
-    path: `category/music-theory`,
-    component: slash(categoryMusicTheoryTemplate)
+    path: `/category/music-theory`,
+    component: slash(MusicTheoryTemplate)
   });
 
   createPage({
-    path: `category/free-stuff`,
-    component: slash(categoryFreeStuffTemplate)
+    path: `/category/free-stuff`,
+    component: slash(FreeStuffTemplate)
   });
 
   createPage({
-    path: `category/reviews`,
-    component: slash(categoryReviewsTemplate)
+    path: `/category/reviews`,
+    component: slash(ReviewsTemplate)
   });
   // We want to create a detailed page for each post node.
   // The path field stems from the original WordPress link

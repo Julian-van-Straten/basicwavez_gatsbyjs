@@ -35,7 +35,7 @@ BlogTemplate.propTypes = {
     edges: PropTypes.array,
 }
 
-export default BlogTemplate
+export default BlogTemplate;
 
 export const pageQuery = graphql`
     query postsQuery{
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
                     title
                     excerpt
                     slug
-                    date(formatString: "MMMM DD, YYYY")
+                    
                 }
             }
         }

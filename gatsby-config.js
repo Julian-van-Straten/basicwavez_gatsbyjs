@@ -1,7 +1,9 @@
+
+
 module.exports = {
   siteMetadata: {
-    title: `Basic Wavez - Home`,
-    subtitle: `blah`,
+    title: `Basic Wavez`,
+    subtitle: `Electronic Music Production tips, tutorials, and resources.`,
     description: `Electronic Music Production tutorials, tips, product reviews, sample packs and products.`,
     author: `Panda Face`,
   },
@@ -42,6 +44,12 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

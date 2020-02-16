@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
+import "./post.css"
 
 class PostTemplate extends Component {
     render() {
@@ -9,8 +10,9 @@ class PostTemplate extends Component {
 
         return (
             <Layout>
-                <div>
+                <div className="post-container">
                     <h1 dangerouslySetInnerHTML={{ __html: post.title }} />
+                    
                     <div dangerouslySetInnerHTML={{ __html: post.content }} />
                 </div>
             </Layout>
@@ -26,6 +28,11 @@ export const pageQuery = graphql`
         wordpressPost(id: { eq: $id }) {
             title
             content
+            featured_media {
+                localFile {
+                    url
+                }
+            }
         }
         site {
             siteMetadata {

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import Link from "gatsby-link"
 import PropTypes from "prop-types"
 import Layout from "../../components/layout"
+import { graphql } from 'gatsby'
 
 class FreeStuffTemplate extends Component {
     render() {

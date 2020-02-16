@@ -40,5 +40,6 @@ export const pageQuery = graphql`
                 subtitle
             }
         }
+    
     }
 `
